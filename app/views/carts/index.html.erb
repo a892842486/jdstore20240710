@@ -1,5 +1,9 @@
 <div class="row">
   <div class="col-md-12">
+    <%= link_to("清空購物車", clean_carts_path ,
+                method: :delete , class: "pull-right",
+                style: "text-decoration: underline;",
+                data: { confirm: "你確定要清空整個購物車嗎？"} )%>
 
     <h2> 購物車 </h2>
 
@@ -43,7 +47,7 @@
 
     <div class="total clearfix">
       <span class="pull-right">
-         <span> 總計 <%= render_cart_total_price(current_cart) %>  </span>
+         <span> 總計 <%= render_cart_total_price(current_cart) %> 元 </span>
       </span>
     </div>
 
