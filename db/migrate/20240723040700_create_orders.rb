@@ -1,4 +1,4 @@
-class CreateRoders < ActiveRecord::Migration[5.0]
+class CreateOrders < ActiveRecord::Migration[5.0]
   def change
     create_table :roders do |t|
       t.integer :total, default: 0
