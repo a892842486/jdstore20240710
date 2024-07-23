@@ -1,0 +1,2 @@
+class Roder < ApplicationRecord
+end
