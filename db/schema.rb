@@ -25,17 +25,7 @@ ActiveRecord::Schema.define(version: 20240723040700) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "products", force: :cascade do |t|
-    t.string   "title"
-    t.text     "description"
-    t.integer  "quantity"
-    t.integer  "price"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.string   "image"
-  end
-
-  create_table "roders", force: :cascade do |t|
+  create_table "orders", force: :cascade do |t|
     t.integer  "total",            default: 0
     t.integer  "user_id"
     t.string   "billing_name"
@@ -44,6 +34,16 @@ ActiveRecord::Schema.define(version: 20240723040700) do
     t.string   "shipping_address"
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "quantity"
+    t.integer  "price"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "image"
   end
 
   create_table "users", force: :cascade do |t|
