@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'products#index'
 
-  resources :orders
+  #resources :orders
 
   resources :products do
     member do
@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     member do
       post :pay_with_creditcard
       post :pay_with_ewallet
+      post :apply_to_cancel
     end
   end
 
